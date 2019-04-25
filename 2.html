@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
   <head>
-    <title>1</title>
+    <title>2</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="height=device-height,initial-scale=1,user-scalable=no,maximum-scale=1,,user-scalable=no"/>
     <meta name="renderer" content="webkit"/>
@@ -13,6 +13,9 @@
         height: 100%;
         padding: 0;
         margin: 0;
+      }
+      .clear {
+        clear: both;
       }
       .bg {
         background-repeat: no-repeat;
@@ -26,6 +29,7 @@
         left: 0;
         right: 0;
         margin: auto;
+        background-color: transparent;
       }
       .content img {
         display: block;
@@ -35,11 +39,26 @@
         margin: 10% 0;
       }
       .login-title {
-        width: 37%;
+        height: 26px;
         margin: 6% 0;
       }
-      .button-box .button {
-        display: block;
+      .button-box {
+        width: 60%;
+      }
+      .button-box button {
+        height: 40px;
+        width: 120px;
+        background: none;
+        border: 1px solid #6a1c1c;
+        border-radius: 20px;
+        font-size: 20px;
+        cursor: pointer;
+      }
+      .button-box .login {
+        float: left;
+      }
+      .button-box .land {
+        float: right;
       }
       .login-box input {
         border: 1px solid #6a1c1c;
@@ -49,11 +68,45 @@
         width: 60%;
         margin: 3% 0;
         display: block;
+        font-size: 20px;
+        outline: none;
+      }
+      .forget {
+        color: #480e0d;
+        line-height: 50px;
+        font-size: 20px;
+        padding: 10px 0;
+      }
+      .forget a {
+        color: #424c4e;
+        line-height: 50px;
+        font-size: 20px;
+        text-decoration: none;
       }
       input::-webkit-input-placeholder {
         color: #6a1c1c;
         font-size: 20px;
         line-height: 30px;
+      }
+      /* 手机屏幕下 */
+      .mini .login-box input {
+        margin: 20px auto;
+        width: 80%;
+      }
+      .mini .button-box {
+        width: 80%;
+        margin: 0 auto;
+      }
+      .mini .title {
+        margin: 0 auto;
+        padding: 60px 0px;
+      }
+      .mini .login-title {
+        margin: 20px 10%;
+        height: 26px;
+      }
+      .mini .forget {
+        margin: 0 10%;
       }
     </style>
   </head>
@@ -64,12 +117,24 @@
         <img class="login-title" src="./static/images/login-title.png">
         <div class="login-box">
           <input type="text" placeholder="邮箱账号"/>
-          <input type="text" placeholder="输入密码"/>
+          <input type="password" placeholder="输入密码"/>
+          <div class="button-box">
+            <button class="login">登陆</button>
+            <button class="land">注册</button>
+            <div class="clear"></div>
+          </div>
+          <div class="forget">
+            忘记密码？点击<a href="#">此处</a>找回
+          </div>
         </div>
       </div>
     </div>
     <script charset="utf-8" src="http://tools.people.com.cn/libs/jquery/3.0.0/jquery-3.0.0.min.js"></script>
     <script>
+      // 禁用屏幕滚动
+      document.body.addEventListener('touchmove', function (e) {
+        e.preventDefault(); //阻止默认的处理方式(阻止下拉滑动的效果)
+      }, {passive: false});
       $(function () {
         // 根据屏幕比例判断横屏还算是竖屏
         var scale = document.body.clientWidth / document.body.clientHeight

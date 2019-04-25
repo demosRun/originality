@@ -1,0 +1,209 @@
+
+html, body, .bg {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  overflow: auto;
+  background-color: white;
+}
+
+.clear {
+  clear: both;
+}
+.bg {
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+  background-size: 100%;
+  background-image: url('../static/images/2-bg.png');
+}
+.content {
+  padding-top: 4%;
+  max-width: 960px;
+  margin: auto;
+  background-color: transparent;
+}
+.content img {
+  display: block;
+}
+.title {
+  width: 85%;
+  margin-bottom: 6%;
+}
+.login-title {
+  height: 35px;
+  line-height: 35px;
+  margin: 20px 0;
+  color: #f86762;
+  font-size: 26px;
+}
+.big-title {
+  height: 40px;
+  line-height: 35px;
+  margin: 20px 0;
+  color: #f86762;
+  font-size: 40px;
+}
+.button-box {
+  width: 60%;
+  margin: 5% 0;
+}
+.button-box button, .button-box a {
+  height: 40px;
+  width: 120px;
+  background: none;
+  border: 1px solid #6a1d1c;
+  border-radius: 20px;
+  font-size: 22px;
+  cursor: pointer;
+  text-align: center;
+  line-height: 40px;
+  color: #6a1d1c;
+}
+.button-box .login, .button-box .last {
+  float: left;
+}
+.button-box .land, .button-box .next {
+  float: right;
+}
+.login-box input {
+  border: 1px solid #6a1c1c;
+  border-radius: 20px;
+  text-align: center;
+  height: 40px;
+  width: 60%;
+  margin: 3% 0;
+  display: block;
+  font-size: 20px;
+  outline: none;
+  padding: 0;
+}
+.input-bar-box {
+  margin-bottom: 15%;
+}
+.input-bar-box .input-bar {
+  text-align: center;
+  width: 60%;
+  margin: 3% 0;
+  display: block;
+  font-size: 20px;
+  line-height: 40px;
+}
+.input-bar-box .input-bar .text {
+  float: left;
+  width: 100px;
+  color: #6a1c1c;
+  font-size: 24px;
+}
+.input-bar-box .input-bar input {
+  border: 1px solid #6a1c1c;
+  border-radius: 20px;
+  outline: none;
+  float: right;
+  width: 400px;
+  height: 40px;
+  text-align: center;
+}
+/* 有条线的输入框 */
+.line-input {
+  border: none;
+  border-bottom: 1px solid #f96569;
+  width: 83%;
+  height: 60px;
+  outline: none;
+  font-size: 26px;
+  color: #52504f;
+  background-color: transparent;
+}
+
+.line-input::-webkit-input-placeholder {
+  color: #f86762;
+  font-size: 26px;
+  line-height: 30px;
+}
+
+/* 输入条 */
+input::-webkit-input-placeholder {
+  color: #f86762;
+  font-size: 20px;
+  line-height: 30px;
+}
+.info-box {
+  color: #8e5356;
+  font-size: 20px;
+  line-height: 40px;
+  width: 86%;
+}
+
+.important {
+  font-size: 20px;
+  margin: 20px auto;
+}
+
+.separate {
+  height: 40px;
+}
+/* 手机屏幕下 */
+.mini .login-box input {
+  margin: 20px 10%;
+  width: 80%;
+  height: 28px;
+}
+.mini .button-box {
+  width: 80%;
+  margin: 25px auto;
+}
+.mini .button-box a, .mini .button-box button {
+  height: 30px;
+  width: 120px;
+  line-height: 30px;
+  font-size: 19px;
+  font-weight: 400;
+}
+.mini .title {
+  margin: 0 auto;
+  padding: 9% 10%;
+  width: 80%;
+}
+.mini .login-title {
+  margin: 20px 10%;
+  height: 26px;
+}
+.mini .forget {
+  margin: 0 10%;
+}
+
+.mini .input-bar-box .input-bar {
+  padding: 15px 10%;
+  width: 80%;
+  text-align: left;
+  margin: 0;
+  line-height: 25px;
+}
+
+.mini .input-bar-box .input-bar .text {
+  font-size: 18px;
+  width: 90px;
+  text-align: left;
+}
+
+.mini .input-bar-box .input-bar input {
+  width: calc(100% - 105px);
+  height: 22px;
+}
+
+.mini .info-box {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.mini .line-input {
+  margin: 0 auto;
+  display: block;
+  width: 80%;
+}
+
+.mini .important {
+  width: 80%;
+}
