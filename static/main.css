@@ -123,6 +123,16 @@ html, body, .bg {
   text-align: center;
 }
 
+/* 大量文本输入 */
+.input-bar-box .input-bar textarea {
+  border: 1px solid #6a1c1c;
+  border-radius: 20px;
+  outline: none;
+  float: left;
+  width: 425px;
+  height: 80px;
+}
+
 /* 表格文字样式 */
 .input-bar-box .input-bar table {
   font-size: 12px;

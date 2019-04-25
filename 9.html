@@ -20,8 +20,8 @@
       <div class="content">
         <div class="big-title">	&bull; 项目报名 	&bull;</div>
         <div class="tab-bar">
-          <div class="item">&bull; 公司信息</div>
-          <div class="item">项目信息</div>
+          <div class="item">公司信息</div>
+          <div class="item">&bull; 项目信息</div>
           <div class="item">核心团队</div>
           <div class="item">其他信息</div>
           <div class="clear"></div>
@@ -29,78 +29,55 @@
         <div class="content-text">(尚未注册公司的初创项目可不填写此项)</div>
         <div class="input-bar-box">
           <div class="input-bar">
-            <div class="text">企业名称</div>
+            <div class="text">项目名称</div>
             <input type="text"/>
             <div class="clear"></div>
           </div>
           <div class="input-bar">
-            <div class="text">注册地址</div>
+            <div class="text">比赛赛区</div>
             <input type="text"/>
             <div class="clear"></div>
           </div>
           <div class="input-bar">
-            <div class="text">注册时间</div>
-            <input type="text"/>
-            <div class="clear"></div>
-          </div>
-          <div class="input-bar">
-            <div class="text">办公地址</div>
-            <input type="text"/>
-            <div class="clear"></div>
-          </div>
-          <div class="input-bar">
-            <div class="text">融资轮次</div>
+            <div class="text">项目类别</div>
             <input type="text"/>
             <div class="clear"></div>
           </div>
           <div class="input-bar">
             <div class="text-explain">
-              <div class="top">注册资本</div>
-              <div class="explain">（单位：万元）</div>
-            </div>
-            <!-- 注册资本输入框 -->
-            <input type="text" class="short"/>
-            <div class="text">员工总数</div>
-            <input type="text" class="short"/>
-            <div class="clear"></div>
-          </div>
-          <div class="input-bar">
-            <div class="text-explain">
-              <div class="top">企业概要</div>
+              <div class="top">项目简述</div>
               <div class="explain">（不超过1000字）</div>
+            </div>
+            <textarea></textarea>
+            <div class="clear"></div>
+          </div>
+          <div class="input-bar">
+            <div class="text">盈利模式</div>
+            <input type="text"/>
+            <div class="clear"></div>
+          </div>
+
+          <div class="input-bar">
+            <div class="text-explain">
+              <div class="top">融资需求</div>
+              <div class="explain">（单位：万元）</div>
             </div>
             <input type="text"/>
             <div class="clear"></div>
           </div>
 
           <div class="input-bar">
-            <div class="text">股东信息</div>
-            <div class="table-box">
-              <table border="1" cellspacing="0" cellpadding="0" id="shareholder">
-                <tr>
-                  <td width="60px">股东名称 /姓名</td>
-                  <td width="60px">股东类型</td>
-                  <td width="60px">应缴金额 （万元￥）</td>
-                  <td width="60px">实缴金额 （万元￥）</td>
-                  <td width="60px">出资形式</td>
-                  <td width="60px">股份比例</td>
-                </tr>
-                <tr>
-                  <th><input type="text"/></th>
-                  <th><input type="text"/></th>
-                  <th><input type="text"/></th>
-                  <th><input type="text"/></th>
-                  <th><input type="text"/></th>
-                  <th><input type="text"/></th>
-                </tr>
-              </table>
-              <!-- 添加表格按钮 -->
-              <div class="add" onclick="addShareholder()">+</div>
-            </div>
+            <div class="text">定位及目标</div>
+            <input type="text"/>
+            <div class="clear"></div>
+          </div>
+
+          <div class="input-bar">
+            <div class="text">商业企划书</div>
+            <input type="text"/>
             <div class="clear"></div>
           </div>
         </div>
-
         <div class="button-box">
           <a class="last">上一步</a>
           <a class="next">下一步</a>
@@ -123,10 +100,6 @@
           body.classList.add('mini')
         }
       })
-      // 股东列表添加
-      function addShareholder () {
-        $('#shareholder')[0].innerHTML = $('#shareholder')[0].innerHTML + '<tr><th><input type="text"/></th><th><input type="text"/></th><th><input type="text"/></th><th><input type="text"/></th><th><input type="text"/></th><th><input type="text"/></th></tr>'
-      }
     </script>
   </body>
 </html>
