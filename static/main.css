@@ -7,7 +7,16 @@ html, body, .bg {
   overflow: auto;
   background-color: white;
 }
-
+/* 去掉ios输入框内阴影 */
+input, textarea {
+  -webkit-appearance: none;
+  appearance: none;
+}
+/* 去掉ios按钮默认样式 */
+.button {
+  padding: 0;
+  margin: 0;
+}
 .clear {
   clear: both;
 }
@@ -46,10 +55,10 @@ html, body, .bg {
   font-size: 40px;
 }
 .button-box {
-  width: 60%;
+  width: 30%;
   margin: 5% 0;
 }
-.button-box button, .button-box a {
+.button-box .button, .button-box a {
   height: 40px;
   width: 120px;
   background: none;
@@ -60,8 +69,11 @@ html, body, .bg {
   text-align: center;
   line-height: 40px;
   color: #6a1d1c;
+  box-sizing: content-box;
+  font-family:'Microsoft YaHei';
 }
 .button-box .login, .button-box .last {
+  margin-left: 1px;
   float: left;
 }
 .button-box .land, .button-box .next {
@@ -78,9 +90,10 @@ html, body, .bg {
   font-size: 20px;
   outline: none;
   padding: 0;
+  background-color: transparent;
 }
 .input-bar-box {
-  margin-bottom: 15%;
+  margin-bottom: 8%;
 }
 .input-bar-box .input-bar {
   text-align: center;
@@ -108,19 +121,57 @@ html, body, .bg {
   line-height: 24px;
 }
 
+.lp-20 {
+  margin-left: 20px;
+}
+
 .input-bar-box .input-bar .text-explain .explain {
   font-size: 12px;
   line-height: 20px;
 }
 
-.input-bar-box .input-bar input {
+.input-bar-box .input-bar input[type=text], .input-bar-box .input-bar input[type=password] {
   border: 1px solid #6a1c1c;
   border-radius: 20px;
   outline: none;
   float: left;
-  width: 425px;
+  width: 444px;
   height: 40px;
   text-align: center;
+  background-color: transparent;
+}
+
+/* 选择框 */
+.input-bar-box .input-bar .check-box {
+  float: left;
+  width: 425px;
+}
+
+.input-bar-box .input-bar .border-box {
+  border: 1px solid #6d1c26;
+}
+
+.input-bar-box .input-bar .no-top {
+  border-top: none;
+}
+
+.input-bar-box input[type=checkbox] {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #8d5155;
+  margin: 10px 0;
+  display: inline-block;
+  float: left;
+  margin-right: 10px;
+}
+
+.input-bar-box .border-box input[type=checkbox] {
+  margin-left: 20px;
+}
+
+.input-bar-box .check-bar {
+  line-height: 40px;
+  text-align: left;
 }
 
 /* 大量文本输入 */
@@ -139,7 +190,7 @@ html, body, .bg {
   line-height: 20px;
 }
 /* 表格里的输入框有自己的样式 */
-.input-bar-box .input-bar table input {
+.input-bar-box .input-bar table tbody input[type=text] {
   border: none;
   border-radius: 0;
   width: 100%;
@@ -148,10 +199,9 @@ html, body, .bg {
 }
 
 /* 短的输入框 */
-.input-bar-box .input-bar .short {
-  width: 135px;
+.content .input-bar-box .input-bar .short {
+  width: 145px;
   float: left;
-  margin-right: 20px;
 }
 
 /* 有条线的输入框 */
@@ -163,6 +213,8 @@ html, body, .bg {
   outline: none;
   font-size: 26px;
   color: #52504f;
+  caret-color: #52504f;
+  border-radius: 0;
   background-color: transparent;
 }
 
@@ -183,15 +235,18 @@ input::-webkit-input-placeholder {
   font-size: 20px;
   line-height: 40px;
   width: 86%;
+  text-align: justify;
 }
 
 .important {
   font-size: 20px;
   margin: 20px auto;
+  padding-left: 1px;
+  color: #6a1d1c;
 }
 
 .separate {
-  height: 40px;
+  height: 20px;
 }
 
 .tab-bar .item {
@@ -211,13 +266,20 @@ input::-webkit-input-placeholder {
 .mini .login-box input {
   margin: 20px 10%;
   width: 80%;
-  height: 28px;
+  height: 33px;
+  background-color: transparent;
+}
+.mini .bg {
+  /* 手机上比例要大一点 */
+  background-size: 160%;
+  /* 网上偏移一点，往右偏移一点 */
+  background-position: 71% 100%;
 }
 .mini .button-box {
   width: 80%;
   margin: 25px auto;
 }
-.mini .button-box a, .mini .button-box button {
+.mini .button-box a, .mini .button-box .button {
   height: 30px;
   width: 120px;
   line-height: 30px;
@@ -259,6 +321,12 @@ input::-webkit-input-placeholder {
 .mini .info-box {
   width: 80%;
   margin: 0 auto;
+  font-size: 14px;
+  letter-spacing: 0px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  word-break: break-all;
+  text-justify: inter-ideograph;
 }
 
 .mini .line-input {
@@ -269,6 +337,9 @@ input::-webkit-input-placeholder {
 
 .mini .important {
   width: 80%;
+  color: #45070e;
+  /* 没对齐往右两个像素 */
+  padding-left: 2px;
 }
 
 .mini .tab-bar .item {

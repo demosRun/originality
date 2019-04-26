@@ -6,6 +6,7 @@
     <meta name="viewport" content="height=device-height,initial-scale=1,user-scalable=no,maximum-scale=1,,user-scalable=no"/>
     <meta name="renderer" content="webkit"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <link rel="stylesheet" href="./static/main.css">
     <!-- *head* -->
     <style type="text/css">
       body, html, .bg {
@@ -55,6 +56,39 @@
         left: 0;
         right: 0;
         margin: auto;
+        position: fixed;
+        bottom: 10%;
+      }
+
+      .mini .button-box img {
+        margin: 0 auto;
+        margin-bottom: 35px;
+      }
+      .home-button-box {
+        width: 242px;
+      }
+      .home-button-box  a {
+        height: 40px;
+        width: 240px;
+        background: none;
+        border: 1px solid #6a1d1c;
+        border-radius: 20px;
+        font-size: 22px;
+        cursor: pointer;
+        text-align: center;
+        line-height: 40px;
+        color: #6a1d1c;
+        display: block;
+        text-decoration: none;
+        box-sizing: content-box;
+        font-family: 'Microsoft YaHei';
+      }
+      .mini .home-button-box {
+        margin: 0 auto;
+        position: fixed;
+        bottom: 25%;
+        left: 0;
+        right: 0;
       }
     </style>
   </head>
@@ -62,9 +96,9 @@
     <div class="bg">
       <div class="content">
         <img class="title" src="./static/images/1-text.png"/>
-        <div class="button-box">
-          <img class="button china" src="./static/images/1-button-china.png"/>
-          <img class="button english" src="./static/images/1-button-english.png"/>  
+        <div class="home-button-box">
+          <a class="button china" href="#">中文版</a>
+          <a class="button english" href="#">英文版</a>
         </div>
       </div>
     </div>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <title>11</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="height=device-height,initial-scale=1,user-scalable=no,maximum-scale=1,,user-scalable=no"/>
+    <meta name="renderer" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <link rel="stylesheet" href="./static/main.css">
+    <style type="text/css">
+      .add {
+        position: absolute;
+        left: 100px;
+        top: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bg">
+      <div class="content">
+        <div class="big-title">	&bull; 项目报名 	&bull;</div>
+        <div class="tab-bar">
+          <div class="item">公司信息</div>
+          <div class="item">项目信息</div>
+          <div class="item">核心团队</div>
+          <div class="item">&bull; 其他信息</div>
+          <div class="clear"></div>
+        </div>
+        <div class="content-text">其他信息 （自主报名不填此项）</div>
+
+        <div class="input-bar-box">
+          <div class="input-bar">
+            <div class="text">推荐单位</div>
+            <input type="text"/>
+            <div class="clear"></div>
+          </div>
+          <div class="input-bar">
+            <div class="text">参赛目的</div>
+            <div class="check-box">
+              <div class="border-box">
+                <!-- 选择框选择项目 -->
+                <div class="check-bar">
+                  <input type="checkbox" value="check">竞争大赛优胜荣誉
+                  <div class="clear"></div>
+                </div>
+                <div class="check-bar">
+                  <input type="checkbox" value="check">寻求融资机会
+                  <div class="clear"></div>
+                </div>
+                <div class="check-bar">
+                  <input type="checkbox" value="check">寻求学习、体验、广泛交流机会
+                  <div class="clear"></div>
+                </div>
+                <div class="check-bar">
+                  <input type="checkbox" value="check">寻求政府政策支持
+                  <div class="clear"></div>
+                </div>
+              </div>
+              <!-- 没有顶部的边框盒子 -->
+              <div class="border-box no-top">
+                <!-- 选择框选择项目 -->
+                <div class="check-bar">
+                  <input type="checkbox" value="check">自我宣传展示
+                  <div class="clear"></div>
+                </div>
+                <div class="check-bar">
+                  <input type="checkbox" value="check">其他（请注明）
+                  <div class="clear"></div>
+                </div>
+              </div>
+            </div>
+            <div class="clear"></div>
+          </div>
+        </div>
+
+        <div class="content-text">机构设置&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;是否有意在北京设置分支机构</div>
+        
+        <div class="input-bar-box">
+          <!-- 选择框选择项目 -->
+          <div class="check-bar">
+            <input type="checkbox" value="check">自我宣传展示
+            <div class="clear"></div>
+          </div>
+        </div>
+        
+        <div class="button-box">
+          <a class="last">上一步</a>
+          <a class="next">提交</a>
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+    <script charset="utf-8" src="http://tools.people.com.cn/libs/jquery/3.0.0/jquery-3.0.0.min.js"></script>
+    <script>
+      // 禁用屏幕滚动
+      document.body.addEventListener('touchmove', function (e) {
+        e.preventDefault(); // 阻止默认的处理方式(阻止下拉滑动的效果)
+      }, {passive: false});
+      $(function () {
+        // 根据屏幕比例判断横屏还算是竖屏
+        var scale = document.body.clientWidth / document.body.clientHeight
+        var body = document.getElementsByTagName('body')[0]
+        if (scale < 1) {
+          body.classList.add('mini')
+        }
+      })
+    </script>
+  </body>
+</html>

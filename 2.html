@@ -13,11 +13,18 @@
         height: 100%;
         padding: 0;
         margin: 0;
+        overflow: hidden;
+      }
+      /* 去掉ios输入框内阴影 */
+      input, textarea {
+        -webkit-appearance: none;
+        appearance: none;
       }
       .clear {
         clear: both;
       }
       .bg {
+        overflow: auto;
         background-repeat: no-repeat;
         background-position: 100% 100%;
         background-size: 100%;
@@ -25,9 +32,7 @@
       }
       .content {
         max-width: 960px;
-        position: absolute;
-        left: 0;
-        right: 0;
+        height: 100%;
         margin: auto;
         background-color: transparent;
       }
@@ -45,14 +50,15 @@
       .button-box {
         width: 60%;
       }
-      .button-box button {
+      .button-box .button {
         height: 40px;
         width: 120px;
         background: none;
-        border: 1px solid #6a1c1c;
+        border: 1px solid #45070e;
         border-radius: 20px;
         font-size: 20px;
         cursor: pointer;
+        color: #45070e;
       }
       .button-box .login {
         float: left;
@@ -61,21 +67,24 @@
         float: right;
       }
       .login-box input {
-        border: 1px solid #6a1c1c;
+        border: 1px solid #45070e;
         border-radius: 20px;
         text-align: center;
-        height: 40px;
+        height: 39px;
         width: 60%;
         margin: 3% 0;
         display: block;
         font-size: 20px;
         outline: none;
+        padding: 0;
+        padding-bottom: 1px;
+        background-color: transparent;
       }
       .forget {
-        color: #480e0d;
+        color: #45070e;
         line-height: 50px;
         font-size: 20px;
-        padding: 10px 0;
+        padding: 10px 2px;
       }
       .forget a {
         color: #424c4e;
@@ -92,6 +101,13 @@
       .mini .login-box input {
         margin: 20px auto;
         width: 80%;
+        box-sizing: content-box;
+      }
+      .mini .login-box .button {
+        width: 120px;
+        margin: 0;
+        padding: 0;
+        box-sizing: content-box;
       }
       .mini .button-box {
         width: 80%;
@@ -119,8 +135,8 @@
           <input type="text" placeholder="邮箱账号"/>
           <input type="password" placeholder="输入密码"/>
           <div class="button-box">
-            <button class="login">登陆</button>
-            <button class="land">注册</button>
+            <input type="button" class="login button" value="登陆"/>
+            <input type="button" class="land button" value="注册"/>
             <div class="clear"></div>
           </div>
           <div class="forget">
