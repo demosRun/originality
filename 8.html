@@ -8,11 +8,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <link rel="stylesheet" href="./static/main.css">
     <style type="text/css">
-      .add {
+      /* .add {
         position: absolute;
         left: 100px;
         top: 40px;
       }
+      .mini .add {
+        top: 10px;
+        left: 130px;
+      } */
     </style>
   </head>
   <body>
@@ -20,7 +24,7 @@
       <div class="content">
         <div class="big-title">	&bull; 项目报名 	&bull;</div>
         <div class="tab-bar">
-          <div class="item">&bull; 公司信息</div>
+          <div class="item active">公司信息</div>
           <div class="item">项目信息</div>
           <div class="item">核心团队</div>
           <div class="item">其他信息</div>
@@ -53,21 +57,23 @@
             <input type="text"/>
             <div class="clear"></div>
           </div>
-          <div class="input-bar">
+          <div class="input-bar explain">
             <div class="text-explain">
               <div class="top">注册资本</div>
-              <div class="explain">（单位：万元）</div>
+              <div class="explain">(单位：万元)</div>
             </div>
             <!-- 注册资本输入框 -->
             <input type="text" class="short"/>
+            <div class="lp-20-clear"></div>
             <div class="text lp-20">员工总数</div>
-            <input type="text" class="short"/>
+            
+            <input type="text" class="short lp-21"/>
             <div class="clear"></div>
           </div>
-          <div class="input-bar">
+          <div class="input-bar explain">
             <div class="text-explain">
               <div class="top">企业概要</div>
-              <div class="explain">（不超过1000字）</div>
+              <div class="explain">(不超过1000字)</div>
             </div>
             <input type="text"/>
             <div class="clear"></div>
@@ -76,26 +82,28 @@
           <div class="input-bar">
             <div class="text">股东信息</div>
             <div class="table-box">
-              <table border="1" cellspacing="0" cellpadding="0" id="shareholder">
+              <table border="0" cellspacing="0" cellpadding="0" id="shareholder">
                 <tr>
-                  <td width="60px">股东名称 /姓名</td>
-                  <td width="60px">股东类型</td>
-                  <td width="60px">应缴金额 （万元￥）</td>
-                  <td width="60px">实缴金额 （万元￥）</td>
-                  <td width="60px">出资形式</td>
-                  <td width="60px">股份比例</td>
+                  <th width="100px">股东名称 /姓名</th>
+                  <th><input type="text"/></th>
+                  <th width="100px">股东类型</th>
+                  <th><input type="text"/></th>
                 </tr>
                 <tr>
+                  <th width="100px">应缴金额(万元￥)</th>
                   <th><input type="text"/></th>
+                  <th width="100px">实缴金额 (万元￥)</th>
                   <th><input type="text"/></th>
+                </tr>
+                <tr>
+                  <th width="100px">出资形式</th>
                   <th><input type="text"/></th>
-                  <th><input type="text"/></th>
-                  <th><input type="text"/></th>
+                  <th width="100px">股份比例</th>
                   <th><input type="text"/></th>
                 </tr>
               </table>
               <!-- 添加表格按钮 -->
-              <div class="add" onclick="addShareholder()">+</div>
+              <div class="add" onclick="addShareholder()">+ 增加股东信息</div>
             </div>
             <div class="clear"></div>
           </div>
@@ -111,10 +119,6 @@
     <script charset="utf-8" src="http://tools.people.com.cn/libs/jquery/3.0.0/jquery-3.0.0.min.js"></script>
     <script>
       // 禁用屏幕滚动
-      // 禁用屏幕滚动
-      document.body.addEventListener('touchmove', function (e) {
-        e.preventDefault(); // 阻止默认的处理方式(阻止下拉滑动的效果)
-      }, {passive: false});
       $(function () {
         // 根据屏幕比例判断横屏还算是竖屏
         var scale = document.body.clientWidth / document.body.clientHeight
@@ -125,7 +129,7 @@
       })
       // 股东列表添加
       function addShareholder () {
-        $('#shareholder')[0].innerHTML = $('#shareholder')[0].innerHTML + '<tr><th><input type="text"/></th><th><input type="text"/></th><th><input type="text"/></th><th><input type="text"/></th><th><input type="text"/></th><th><input type="text"/></th></tr>'
+        $('#shareholder')[0].innerHTML = $('#shareholder')[0].innerHTML + '<tr><th width="100px">股东名称 /姓名</th><th><input type="text"/></th><th width="100px">股东类型</th><th><input type="text"/></th></tr><tr><th width="100px">应缴金额(万元￥)</th><th><input type="text"/></th><th width="100px">实缴金额 (万元￥)</th><th><input type="text"/></th></tr><tr><th width="100px">出资形式</th><th><input type="text"/></th><th width="100px">股份比例</th><th><input type="text"/></th></tr>'
       }
     </script>
   </body>

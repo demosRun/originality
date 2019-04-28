@@ -1,15 +1,32 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
   <head>
-    <title>11</title>
+    <title>12</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="height=device-height,initial-scale=1,user-scalable=no,maximum-scale=1,,user-scalable=no"/>
     <meta name="renderer" content="webkit"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <link rel="stylesheet" href="./static/main.css">
     <style type="text/css">
-      .info-box {
-
+      .border-info-box {
+        border: 1px solid #6a1c1c;
+        margin: 10% 0;
+        width: 50%;
+        border-radius: 20px;
+        padding: 20px;
+        font-size: 20px;
+        color: #6a1c1c;
+      }
+      .border-info-box .text {
+        margin-bottom: 40px;
+      }
+      .mini .border-info-box {
+        width: calc(80% - 20px);
+        margin: 10% auto;
+        padding: 10px;
+      }
+      .mini .big-title {
+        margin: 10%;
       }
     </style>
   </head>
@@ -17,9 +34,13 @@
     <div class="bg">
       <div class="content">
         <div class="big-title">	&bull; 结果查询	&bull;</div>
-        <div class="info-box">
-          <div class="text"></div>
-          <div class=""></div>
+        <div class="border-info-box">
+          <div class="text">您提交的项目正在审核中</div>
+          <div class="">审核通过的项目，我们会以邮件形式将审核结果发送至您的注册邮箱，请耐心等待。</div>
+        </div>
+        <div class="button-box">
+          <a class="last">返回</a>
+          <div class="clear"></div>
         </div>
       </div>
     </div>

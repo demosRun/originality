@@ -104,6 +104,9 @@
     </div>
     <script charset="utf-8" src="http://tools.people.com.cn/libs/jquery/3.0.0/jquery-3.0.0.min.js"></script>
     <script>
+      document.body.addEventListener('touchmove', function (e) {
+        e.preventDefault(); // 阻止默认的处理方式(阻止下拉滑动的效果)
+      }, {passive: false});
       $(function () {
         // 根据屏幕比例判断横屏还算是竖屏
         var scale = document.body.clientWidth / document.body.clientHeight

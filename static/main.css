@@ -97,7 +97,7 @@ input, textarea {
 }
 .input-bar-box .input-bar {
   text-align: center;
-  width: 60%;
+  width: 61%;
   margin: 3% 0;
   display: block;
   font-size: 20px;
@@ -172,6 +172,25 @@ input, textarea {
 .input-bar-box .check-bar {
   line-height: 40px;
   text-align: left;
+}
+
+table {
+  border-top: 1px solid #6a1c1c;
+  border-left: 1px solid #6a1c1c;
+}
+
+td {
+  text-align: center;
+}
+th {
+  text-align: center;
+  border: none;
+  border-bottom: 1px solid #6a1c1c;
+  border-right: 1px solid #6a1c1c;
+  font-weight: normal;
+  text-align: left;
+  padding-left: 5px;
+  color: #6a1c1c;
 }
 
 /* 大量文本输入 */
@@ -251,15 +270,28 @@ input::-webkit-input-placeholder {
 
 .tab-bar .item {
   float: left;
-  width: 140px;
-  color: #502e2f;
+  padding-right: 60px;
+  color: #6a1c1c;
   font-size: 22px;
 }
 
 .content-text {
-  color: #28090e;
+  color: #6a1c1c;
   font-size: 20px;
   line-height: 50px;
+}
+
+.table-box table {
+  width: 444px;
+}
+
+.add {
+  font-size: 14px;
+  text-align: left;
+  line-height: 25px;
+  margin: 5px 0;
+  color: #6a1c1c;
+  padding-left: 130px;
 }
 
 /* 手机屏幕下 */
@@ -300,7 +332,7 @@ input::-webkit-input-placeholder {
 }
 
 .mini .input-bar-box .input-bar {
-  padding: 15px 10%;
+  padding: 10px 10%;
   width: 80%;
   text-align: left;
   margin: 0;
@@ -309,13 +341,13 @@ input::-webkit-input-placeholder {
 
 .mini .input-bar-box .input-bar .text {
   font-size: 18px;
-  width: 90px;
-  text-align: left;
+  width: 100px;
 }
 
-.mini .input-bar-box .input-bar input {
-  width: calc(100% - 105px);
+.mini .input-bar-box .input-bar input, .mini .content .input-bar-box .input-bar .short {
+  width: calc(100% - 115px);
   height: 22px;
+  padding: 0 5px;
 }
 
 .mini .info-box {
@@ -343,21 +375,69 @@ input::-webkit-input-placeholder {
 }
 
 .mini .tab-bar .item {
-  width: 90px;
-  font-size: 18px;
-  text-align: center;
+  font-size: 15px;
+  width: 25%;
+  padding-right: 0;
+}
+.tab-bar .active {
+  color: #f86762;
 }
 
 .mini .big-title {
   margin: 0 10%;
+  font-size: 26px;
 }
 .mini .content-text {
   margin: 0 10%;
   font-size: 14px;
+  line-height: 40px;
 }
 
 .mini .input-bar-box .input-bar .text-explain {
   font-size: 18px;
-  width: 90px;
-  text-align: left;
+  line-height: 14px;
+  width: 100px;
+}
+
+.mini .input-bar-box .input-bar .explain {
+  font-size: 12px;
+}
+
+.mini .tab-bar {
+  margin: 3% 10%;
+}
+
+.mini .lp-20-clear {
+  clear: both;
+}
+.mini .lp-20 {
+  margin-left: 0;
+  margin-top: 15px;
+}
+
+.mini .input-bar-box .explain .lp-21 {
+  margin: 0;
+  margin-top: 15px;
+}
+
+.mini .table-box {
+  padding-top: 40px;
+}
+
+.mini .input-bar-box .input-bar table {
+  width: 100%;
+}
+
+
+.mini .input-bar-box .input-bar textarea {
+  width: calc(100% - 110px);
+}
+
+.mini .add {
+  padding-left: 0;
+  text-align: center;
+}
+
+.mini .input-bar-box .explain input {
+  /* margin: 3px 0px; */
 }
