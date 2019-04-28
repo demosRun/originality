@@ -9,7 +9,54 @@
     <link rel="stylesheet" href="./static/main.css">
     <style type="text/css">
       .mini .input-bar-box .explain input {
-        margin: 3px 0px;
+        margin: 8px 0px;
+      }
+      .mini .input-bar-box .explain {
+        padding-bottom: 3px;
+        padding-top: 10px;
+      }
+      .mini .input-bar-box .pr-30 {
+        padding-top: 2px;
+        padding-bottom: 0;
+        margin-bottom: -4px;
+      }
+      .mini textarea {
+        margin-bottom: 8px;
+      }
+      .upload {
+        display: block;
+        border: 1px solid #6a1c1c;
+        border-radius: 20px;
+        outline: none;
+        float: left;
+        width: 200px;
+        height: 40px;
+        text-align: center;
+        background-color: transparent;
+      }
+      .upload input {
+        opacity: 0;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+      }
+      .tips {
+        font-size: 14px;
+        color: gray;
+      }
+      .mini .upload {
+        width: 87px;
+        font-size: 14px;
+        height: 20px;
+        line-height: 20px;
+      }
+      .mini .tips {
+        font-size: 12px;
+        display: block;
+        position: absolute;
+        bottom: -13px;
       }
     </style>
   </head>
@@ -55,7 +102,7 @@
             <div class="clear"></div>
           </div>
 
-          <div class="input-bar explain">
+          <div class="input-bar explain  pr-30">
             <div class="text-explain">
               <div class="top">融资需求</div>
               <div class="explain">(单位：万元)</div>
@@ -72,7 +119,10 @@
 
           <div class="input-bar">
             <div class="text">商业企划书</div>
-            <input type="text"/>
+            <span class="upload">
+              <input type="file"/>上传附件
+            </span>
+            <span class="tips">注: 请上传BP、公司介绍PPT等资料</span>
             <div class="clear"></div>
           </div>
         </div>
