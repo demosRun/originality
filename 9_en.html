@@ -1,22 +1,20 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
   <head>
-    <title>8</title>
+    <title>9</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="height=device-height,initial-scale=1,user-scalable=no,maximum-scale=1,,user-scalable=no"/>
     <meta name="renderer" content="webkit"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <link rel="stylesheet" href="./static/main.css">
     <style type="text/css">
-      /* .add {
-        position: absolute;
-        left: 100px;
-        top: 40px;
+      .mini .input-bar-box .explain input {
+        margin: 8px 0px;
       }
-      .mini .add {
-        top: 10px;
-        left: 130px;
-      } */
+      .mini .input-bar-box .explain {
+        padding-bottom: 3px;
+        padding-top: 10px;
+      }
       .mini textarea {
         margin-bottom: 8px;
       }
@@ -28,7 +26,6 @@
         float: left;
         width: 200px;
         height: 40px;
-        font-size: 16px;
         text-align: center;
         background-color: transparent;
       }
@@ -83,12 +80,23 @@
         line-height: 45px;
       }
       .mini .input-bar-box .input-bar textarea {
-        margin-top: 5px;
         width: 100%;
+        margin: 8px 0px;
       }
       .mini .upload {
         width: 100%;
         margin: 10px 0;
+      }
+      .mini .input-bar-box .input-bar input[type=text], .mini .input-bar-box .input-bar input[type=password] {
+        width: 100%;
+      }
+      .tips {
+        position: absolute;
+        width: 100%;
+        left: 345px;
+      }
+      .upload {
+        font-size: 16px;
       }
       .input-bar-box .input-bar .text-explain .explain {
         width: 200px;
@@ -97,9 +105,6 @@
       }
       .mini .input-bar-box .input-bar .explain {
         padding-bottom: 5px;
-      }
-      .button-box .button, .button-box a {
-        font-size: 18px;
       }
       .input-bar-box .input-bar .text, .input-bar-box .input-bar .text-explain {
         font-size: 22px;
@@ -112,70 +117,52 @@
   <body>
     <div class="bg">
       <div class="content">
-        <div class="big-title">	&bull; 项目报名 	&bull;</div>
+        <div class="big-title">Registration Entry</div>
         <div class="tab-bar">
-          <div class="item active">General Information</div>
-          <div class="item">Project Information</div>
+          <div class="item">General Information</div>
+          <div class="item active">Project Information</div>
           <div class="item">Core Team Information</div>
           <div class="clear"></div>
         </div>
         <div class="input-bar-box">
           <div class="input-bar">
-            <div class="text">Company Name</div>
+            <div class="text">Project Name </div>
             <input type="text"/>
             <div class="clear"></div>
           </div>
           <div class="input-bar">
-            <div class="text">Company Domicile</div>
-            <input type="text"/>
-            <div class="clear"></div>
-          </div>
-          <div class="input-bar">
-            <div class="text">Date of Registration</div>
-            <input type="text"/>
-            <div class="clear"></div>
-          </div>
-          <div class="input-bar">
-            <div class="text">Company Address</div>
+            <div class="text">Division</div>
             <input type="text"/>
             <div class="clear"></div>
           </div>
           <div class="input-bar explain">
             <div class="text-explain">
-              <div class="top">Registered Capital</div>
-              <div class="explain">(in ten thousand yuan)</div>
-            </div>
-            <!-- 注册资本输入框 -->
-            <input type="text"/>
-            <div class="clear"></div>
-          </div>
-          <div class="input-bar">
-            <div class="text">Number of employees</div>
-            <input type="text"/>
-            <div class="clear"></div>
-          </div>
-          <div class="input-bar explain">
-            <div class="text-explain">
-              <div class="top">Company Overview</div>
+              <div class="top">Project Overview</div>
               <div class="explain">(up to 1000 words)</div>
             </div>
-            <textarea type="text"></textarea>
+            <textarea></textarea>
             <div class="clear"></div>
           </div>
+
+          <div class="input-bar explain  pr-30">
+            <div class="text">Financing Needs</div>
+            <input type="text"/>
+            <div class="clear"></div>
+          </div>
+
           <div class="input-bar">
             <div class="text-explain">
-              <div class="top">Company Profile</div>
+              <div class="top">Business Plan</div>
               <div class="explain">(Please upload Chinese translation together)</div>
             </div>
             <span class="upload">
-              <input type="file"/>Upload Attachment
+              <input type="file"/>Upload Attachment 
             </span>
             <div class="clear"></div>
           </div>
         </div>
-
         <div class="button-box">
-          <a class="last">Return</a>
+          <a class="last">Previous</a>
           <a class="next">Next</a>
           <div class="clear"></div>
         </div>
@@ -183,7 +170,6 @@
     </div>
     <script charset="utf-8" src="http://tools.people.com.cn/libs/jquery/3.0.0/jquery-3.0.0.min.js"></script>
     <script>
-      // 禁用屏幕滚动
       $(function () {
         // 根据屏幕比例判断横屏还算是竖屏
         var scale = document.body.clientWidth / document.body.clientHeight

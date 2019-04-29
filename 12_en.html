@@ -1,37 +1,54 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
   <head>
-    <title>4</title>
+    <title>12</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="height=device-height,initial-scale=1,user-scalable=no,maximum-scale=1,,user-scalable=no"/>
     <meta name="renderer" content="webkit"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <link rel="stylesheet" href="./static/main.css">
-    <style>
-      .info-box {
-        font-size: 18px;
+    <style type="text/css">
+      .border-info-box {
+        border: 1px solid #6a1c1c;
+        margin: 10% 0;
+        width: 50%;
+        border-radius: 20px;
+        padding: 20px;
+        font-size: 20px;
+        color: #6a1c1c;
       }
-      .content input::-webkit-input-placeholder {
-        font-size: 18px;
+      .border-info-box .text {
+        margin-bottom: 20px;
+      }
+      .mini .border-info-box {
+        width: calc(80% - 20px);
+        margin: 10% auto;
+        padding: 10px;
+      }
+      .mini .big-title {
+        margin: 10%;
       }
       .button-box .button, .button-box a {
         font-size: 18px;
+      }
+      .input-bar-box .input-bar .text, .input-bar-box .input-bar .text-explain {
+        font-size: 22px;
+      }
+      .input-bar-box .input-bar .text-explain .explain {
+        font-size: 16px;
       }
     </style>
   </head>
   <body>
     <div class="bg">
       <div class="content">
-        <img class="title" src="./static/images/en-text.png"/>
-        <div class="login-title">Verification email</div>
-        <div class="input-bar-box">
-          <!-- 文字信息说明框 -->
-          <div class="info-box">We have sent a message with a verification code to your email address,Please enter the verification code below.If you do not receive the email,Please check the spam folder or click the previous step to try again.</div>
-          <input type="text" class="line-input" placeholder="Enter verification code"/>
+        <div class="big-title">Query progress</div>
+        <div class="border-info-box">
+          <div class="text">The project you submitted is under review.</div>
+          <div class="">For the approved projects, we will send the resultsto your registered email address.</div>
         </div>
         <div class="button-box">
-          <a class="last">Previous</a>
-          <a class="next">Verify</a>
+          <a class="last">Return</a>
           <div class="clear"></div>
         </div>
       </div>
@@ -40,7 +57,7 @@
     <script>
       // 禁用屏幕滚动
       document.body.addEventListener('touchmove', function (e) {
-        e.preventDefault(); //阻止默认的处理方式(阻止下拉滑动的效果)
+        e.preventDefault(); // 阻止默认的处理方式(阻止下拉滑动的效果)
       }, {passive: false});
       $(function () {
         // 根据屏幕比例判断横屏还算是竖屏

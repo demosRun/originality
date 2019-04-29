@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <title>10</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="height=device-height,initial-scale=1,user-scalable=no,maximum-scale=1,,user-scalable=no"/>
+    <meta name="renderer" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <link rel="stylesheet" href="./static/main.css">
+    <style type="text/css">
+      th {
+        width: 69px;
+      }
+      .wide {
+        width: 100px;
+      }
+      .input-bar-box {
+        margin-bottom: 0;
+      }
+      .mini .button-box {
+        margin-bottom: 70px;
+      }
+      .input-bar-box .input-bar .text-explain {
+        width: 220px;
+      }
+      .input-bar-box .input-bar .text-explain .explain {
+        margin: 10px 0;
+        font-size: 20px;
+      }
+      .mini .input-bar-box .input-bar .text-explain {
+        width: 100%;
+        margin-bottom: 5px;
+      }
+      .mini .tab-bar .item {
+        width: 100%;
+        float: none;
+        font-size: 20px;
+        line-height: 45px;
+      }
+      .mini .input-bar-box .input-bar textarea {
+        width: 100%;
+      }
+      .mini .input-bar-box .input-bar .explain {
+        margin-top: 5px;
+        font-size: 16px;
+      }
+      .input-bar-box .input-bar textarea {
+        width: 350px;
+      }
+      .input-bar-box .input-bar {
+        margin: 8% 0;
+      }
+      .button-box .button, .button-box a {
+        font-size: 18px;
+      }
+      .input-bar-box .input-bar .text, .input-bar-box .input-bar .text-explain {
+        font-size: 22px;
+      }
+      .input-bar-box .input-bar .text-explain .explain {
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bg">
+      <div class="content">
+        <div class="big-title">	&bull; 项目报名 	&bull;</div>
+        <div class="tab-bar">
+          <div class="item">General Information</div>
+          <div class="item">Project Information</div>
+          <div class="item active">Core Team Information</div>
+          <div class="clear"></div>
+        </div>
+        <div class="input-bar-box">
+          <div class="input-bar explain">
+            <div class="text-explain">
+              <div class="top">Team Overview</div>
+              <div class="explain">(up to 1000 words)</div>
+            </div>
+            <textarea></textarea>
+            <div class="clear"></div>
+          </div>
+        </div>
+        <div class="button-box">
+          <a class="last">Previous</a>
+          <a class="next">Submit</a>
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+    <script charset="utf-8" src="http://tools.people.com.cn/libs/jquery/3.0.0/jquery-3.0.0.min.js"></script>
+    <script>
+      // 禁用屏幕滚动
+      $(function () {
+        // 根据屏幕比例判断横屏还算是竖屏
+        var scale = document.body.clientWidth / document.body.clientHeight
+        var body = document.getElementsByTagName('body')[0]
+        if (scale < 1) {
+          body.classList.add('mini')
+        }
+      })
+      // 添加联合创始人
+      function addOtherFounder () {
+        $('#otherFounder')[0].innerHTML = $('#otherFounder')[0].innerHTML + '<tr><th>姓名</th><th><input type="text"/></th><th>性别</th><th><input type="text"/></th><th>年龄</th><th><input type="text"/></th></tr><tr><th>职位</th><th><input type="text"/></th><th>职称</th><th><input type="text"/></th><th>最高学历</th><th><input type="text"/></th></tr><tr><th>办公电话</th><th><input type="text"/></th><th>E-mail</th><th><input type="text"/></th><th>手机</th><th><input type="text"/></th></tr><tr><th>相关业绩</th><th colspan="5"><input type="text"/></th></tr>'
+      }
+      // 添加核心团队
+      function addCore () {
+        $('#core')[0].innerHTML = $('#core')[0].innerHTML + '<tr><th>姓名</th><th><input type="text"/></th><th>性别</th><th><input type="text"/></th><th>年龄</th><th><input type="text"/></th></tr><tr><th>职位</th><th><input type="text"/></th><th>职称</th><th><input type="text"/></th><th>最高学历</th><th><input type="text"/></th></tr><tr><th>办公电话</th><th><input type="text"/></th><th>E-mail</th><th><input type="text"/></th><th>手机</th><th><input type="text"/></th></tr><tr><th>相关业绩</th><th colspan="5"><input type="text"/></th></tr>'
+      }
+    </script>
+  </body>
+</html>
