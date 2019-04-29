@@ -8,10 +8,21 @@ html, body, .bg {
   background-color: white;
 }
 /* 去掉ios输入框内阴影 */
-input, textarea {
-  -webkit-appearance: none;
-  appearance: none;
+.input-bar-box .border-box .check-bar input[type=checkbox]{
+  appearance: checkbox;
+  -webkit-appearance: checkbox;
 }
+
+.radio-bar input[type=radio] {
+  appearance: radio;
+  -webkit-appearance: radio;
+}
+
+input, textarea {
+  appearance: none;
+  -webkit-appearance: none;
+}
+
 /* 去掉ios按钮默认样式 */
 .button {
   padding: 0;
@@ -144,7 +155,8 @@ input, textarea {
 /* 选择框 */
 .input-bar-box .input-bar .check-box {
   float: left;
-  width: 425px;
+  width: 445px;
+  color: #6a1c1c;
 }
 
 .input-bar-box .input-bar .border-box {
@@ -155,7 +167,7 @@ input, textarea {
   border-top: none;
 }
 
-.input-bar-box input[type=checkbox] {
+.input-bar-box .border-box .check-bar input[type=checkbox] {
   width: 20px;
   height: 20px;
   border: 1px solid #8d5155;
@@ -165,7 +177,7 @@ input, textarea {
   margin-right: 10px;
 }
 
-.input-bar-box .border-box input[type=checkbox] {
+.input-bar-box .border-box .check-bar input[type=checkbox] {
   margin-left: 20px;
 }
 
@@ -293,6 +305,23 @@ input::-webkit-input-placeholder {
   margin: 5px 0;
   color: #6a1c1c;
   padding-left: 130px;
+  cursor: pointer;
+}
+
+/* 单选框 */
+.radio-bar input {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #8d5155;
+  float: left;
+  margin: 0;
+}
+
+.radio-bar .check-text {
+  float: left;
+  padding-right: 39px;
+  line-height: 20px;
+  padding-left: 10px;
 }
 
 /* 手机屏幕下 */
@@ -348,7 +377,8 @@ input::-webkit-input-placeholder {
 .mini .input-bar-box .input-bar input, .mini .content .input-bar-box .input-bar .short {
   width: calc(100% - 115px);
   height: 22px;
-  padding: 0 5px;
+  padding: 0;
+  margin-left: -3px;
 }
 
 .mini .info-box {
@@ -443,4 +473,14 @@ input::-webkit-input-placeholder {
 
 .mini .input-bar-box .explain input {
   /* margin: 3px 0px; */
+}
+
+.mini .input-bar-box .input-bar .check-box {
+  width: 100%;
+  font-size: 16px;
+  padding-top: 10px;
+}
+
+.mini .input-bar-box .radio-bar {
+  margin: 0 10%;
 }

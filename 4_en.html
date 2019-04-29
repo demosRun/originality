@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
   <head>
-    <title>3</title>
+    <title>4</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="height=device-height,initial-scale=1,user-scalable=no,maximum-scale=1,,user-scalable=no"/>
     <meta name="renderer" content="webkit"/>
@@ -12,32 +12,15 @@
     <div class="bg">
       <div class="content">
         <img class="title" src="./static/images/2-text.png"/>
-        <div class="login-title">请填写注册信息</div>
+        <div class="login-title">Verification email</div>
         <div class="input-bar-box">
-          <div class="input-bar">
-            <div class="text">邮箱账号</div>
-            <input type="text"/>
-            <div class="clear"></div>
-          </div>
-          <div class="input-bar">
-            <div class="text">电话号码</div>
-            <input type="text"/>
-            <div class="clear"></div>
-          </div>
-          <div class="input-bar">
-            <div class="text">输入密码</div>
-            <input type="password"/>
-            <div class="clear"></div>
-          </div>
-          <div class="input-bar">
-            <div class="text">确认密码</div>
-            <input type="password"/>
-            <div class="clear"></div>
-          </div>
+          <!-- 文字信息说明框 -->
+          <div class="info-box">We have sent a message with a verification code to your email address,Please enter the verification code below.If you do not receive the email,Please check the spam folder or click the previous step to try again.</div>
+          <input type="text" class="line-input" placeholder="Enter verification code"/>
         </div>
         <div class="button-box">
-          <a class="last">上一页</a>
-          <a class="next">下一页</a>
+          <a class="last">Previous</a>
+          <a class="next">Verify</a>
           <div class="clear"></div>
         </div>
       </div>
@@ -51,8 +34,9 @@
       $(function () {
         // 根据屏幕比例判断横屏还算是竖屏
         var scale = document.body.clientWidth / document.body.clientHeight
+        var body = document.getElementsByTagName('body')[0]
         if (scale < 1) {
-          document.getElementsByTagName('body')[0].classList.add('mini')
+          body.classList.add('mini')
         }
       })
     </script>

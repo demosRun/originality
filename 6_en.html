@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
   <head>
-    <title>3</title>
+    <title>6</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="height=device-height,initial-scale=1,user-scalable=no,maximum-scale=1,,user-scalable=no"/>
     <meta name="renderer" content="webkit"/>
@@ -12,32 +12,15 @@
     <div class="bg">
       <div class="content">
         <img class="title" src="./static/images/2-text.png"/>
-        <div class="login-title">请填写注册信息</div>
-        <div class="input-bar-box">
-          <div class="input-bar">
-            <div class="text">邮箱账号</div>
-            <input type="text"/>
-            <div class="clear"></div>
-          </div>
-          <div class="input-bar">
-            <div class="text">电话号码</div>
-            <input type="text"/>
-            <div class="clear"></div>
-          </div>
-          <div class="input-bar">
-            <div class="text">输入密码</div>
-            <input type="password"/>
-            <div class="clear"></div>
-          </div>
-          <div class="input-bar">
-            <div class="text">确认密码</div>
-            <input type="password"/>
-            <div class="clear"></div>
-          </div>
+        <div class="login-title">	&bull; Reset password 	&bull;</div>
+        <div class="separate"></div>
+        <div class="login-box">
+          <input type="password" placeholder="Enter the new password">
+          <input type="password" placeholder="Confirm the new password">
         </div>
+        <div class="separate"></div>
         <div class="button-box">
-          <a class="last">上一页</a>
-          <a class="next">下一页</a>
+          <input type="button" value="Submit" class="last button"/>
           <div class="clear"></div>
         </div>
       </div>
@@ -45,14 +28,16 @@
     <script charset="utf-8" src="http://tools.people.com.cn/libs/jquery/3.0.0/jquery-3.0.0.min.js"></script>
     <script>
       // 禁用屏幕滚动
+      // 禁用屏幕滚动
       document.body.addEventListener('touchmove', function (e) {
         e.preventDefault(); //阻止默认的处理方式(阻止下拉滑动的效果)
       }, {passive: false});
       $(function () {
         // 根据屏幕比例判断横屏还算是竖屏
         var scale = document.body.clientWidth / document.body.clientHeight
+        var body = document.getElementsByTagName('body')[0]
         if (scale < 1) {
-          document.getElementsByTagName('body')[0].classList.add('mini')
+          body.classList.add('mini')
         }
       })
     </script>
