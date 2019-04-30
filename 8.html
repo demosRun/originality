@@ -17,6 +17,13 @@
         top: 10px;
         left: 130px;
       } */
+      .tip-bar {
+        font-size: 14px;
+        text-align: left;
+        padding-left: 130px;
+        color: #6a1c1c;
+        line-height: 25px;
+      }
     </style>
   </head>
   <body>
@@ -54,7 +61,18 @@
           </div>
           <div class="input-bar">
             <div class="text">融资轮次</div>
-            <input type="text"/>
+            <select>
+              <option>未选择</option>
+              <option>尚未获投</option>
+              <option>种子轮</option>
+              <option>天使轮</option>
+              <option>Pre-A轮</option>
+              <option>A轮</option>
+              <option>B轮</option>
+              <option>C轮</option>
+              <option>D轮</option>
+              <option>其他</option>
+            </select>
             <div class="clear"></div>
           </div>
           <div class="input-bar explain">
@@ -104,6 +122,7 @@
               </table>
               <!-- 添加表格按钮 -->
               <div class="add" onclick="addShareholder()">+ 增加股东信息</div>
+              <div class="tip-bar">注<br>* 股东类型：1．自然人   2.上市公司  3.投资机构  4.国有法人  5.其他<br>* 万元人民币：小数点后保留六位数<br>* 出资形式包括：1.货币 2.实物 3.知识产权 4.土地使用权</div>
             </div>
             <div class="clear"></div>
           </div>

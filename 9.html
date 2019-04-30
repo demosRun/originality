@@ -8,17 +8,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <link rel="stylesheet" href="./static/main.css">
     <style type="text/css">
-      .mini .input-bar-box .explain input {
-        margin: 8px 0px;
-      }
       .mini .input-bar-box .explain {
-        padding-bottom: 3px;
-        padding-top: 10px;
+        padding-bottom: 5px;
       }
       .mini .input-bar-box .pr-30 {
-        padding-top: 2px;
-        padding-bottom: 0;
-        margin-bottom: -4px;
+        padding-bottom: 9px;
       }
       .mini textarea {
         margin-bottom: 8px;
@@ -44,7 +38,7 @@
       }
       .tips {
         font-size: 14px;
-        color: gray;
+        color: #383535;
       }
       .mini .upload {
         width: 87px;
@@ -57,6 +51,9 @@
         display: block;
         position: absolute;
         bottom: -13px;
+      }
+      .mini .button-box {
+        padding-bottom: 40px;
       }
     </style>
   </head>
@@ -79,12 +76,61 @@
           </div>
           <div class="input-bar">
             <div class="text">比赛赛区</div>
-            <input type="text"/>
+            <select>
+              <option>未选择</option>
+              <option>天津</option>
+              <option>上海</option>
+              <option>重庆</option>
+              <option>河北</option>
+              <option>山西</option>
+              <option>辽宁</option>
+              <option>吉林</option>
+              <option>黑龙江</option>
+              <option>江苏</option>
+              <option>浙江</option>
+              <option>安徽</option>
+              <option>福建</option>
+              <option>江西</option>
+              <option>山东</option>
+              <option>河南</option>
+              <option>湖北</option>
+              <option>湖南</option>
+              <option>广东</option>
+              <option>海南</option>
+              <option>四川</option>
+              <option>贵州</option>
+              <option>云南</option>
+              <option>陕西</option>
+              <option>甘肃</option>
+              <option>青海</option>
+              <option>内蒙古</option>
+              <option>广西</option>
+              <option>西藏</option>
+              <option>宁夏</option>
+              <option>新疆</option>
+              <option>香港</option>
+              <option>澳门</option>
+              <option>台湾</option>
+            </select>
             <div class="clear"></div>
           </div>
           <div class="input-bar">
             <div class="text">项目类别</div>
-            <input type="text"/>
+            <select>
+              <optgroup>
+                <option>未选择</option>
+                <option>数字创意</option>
+                <option>创意设计</option>
+                <option>动漫游戏</option>
+                <option>非遗及IP开发保护</option>
+                <option>文化教育</option>
+                <option>文化旅游</option>
+                <option>文化体育</option>
+                <option>广告传媒</option>
+                <option>文创类初创项目（其创始人或联合创始人应为大专院校在校学生或应届毕业生）</option>
+                <option>其他项目（包括文化装备、创意生活、文创智库等）</option>
+              </optgroup>
+            </select>
             <div class="clear"></div>
           </div>
           <div class="input-bar explain">
@@ -92,7 +138,7 @@
               <div class="top">项目简述</div>
               <div class="explain">(不超过1000字)</div>
             </div>
-            <textarea></textarea>
+            <textarea placeholder="产品开发、生产策略、行业特点、竞争焦点、产品市场分析、目前所处的发展阶段、本项目的创新性及核心优势、财务表现、未来规划等"></textarea>
             <div class="clear"></div>
           </div>
           <div class="input-bar">
@@ -102,10 +148,7 @@
           </div>
 
           <div class="input-bar explain  pr-30">
-            <div class="text-explain">
-              <div class="top">融资需求</div>
-              <div class="explain">(单位：万元)</div>
-            </div>
+            <div class="text">融资需求</div>
             <input type="text"/>
             <div class="clear"></div>
           </div>
@@ -117,7 +160,7 @@
           </div>
 
           <div class="input-bar">
-            <div class="text">商业企划书</div>
+            <div class="text">商业计划书</div>
             <span class="upload">
               <input type="file"/>上传附件
             </span>
@@ -134,11 +177,6 @@
     </div>
     <script charset="utf-8" src="http://tools.people.com.cn/libs/jquery/3.0.0/jquery-3.0.0.min.js"></script>
     <script>
-      // 禁用屏幕滚动
-      // 禁用屏幕滚动
-      document.body.addEventListener('touchmove', function (e) {
-        e.preventDefault(); // 阻止默认的处理方式(阻止下拉滑动的效果)
-      }, {passive: false});
       $(function () {
         // 根据屏幕比例判断横屏还算是竖屏
         var scale = document.body.clientWidth / document.body.clientHeight

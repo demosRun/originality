@@ -5,10 +5,11 @@ html, body, .bg {
   margin: 0;
   height: 100%;
   overflow: auto;
+  font-family: 'Microsoft YaHei';
   background-color: white;
 }
 /* 去掉ios输入框内阴影 */
-.input-bar-box .border-box .check-bar input[type=checkbox]{
+.input-bar-box .border-box .check-bar input[type=checkbox] {
   appearance: checkbox;
   -webkit-appearance: checkbox;
 }
@@ -90,21 +91,28 @@ input, textarea {
 .button-box .land, .button-box .next {
   float: right;
 }
+.tab-bar {
+  line-height: 40px;
+}
 .login-box input {
   border: 1px solid #6a1c1c;
   border-radius: 20px;
   text-align: center;
   height: 40px;
+  line-height: 40px;
   width: 60%;
   margin: 3% 0;
   display: block;
   font-size: 20px;
   outline: none;
-  padding: 0;
+  padding: 0 10px;
   background-color: transparent;
 }
 .input-bar-box {
-  margin-bottom: 8%;
+  margin-bottom: 4%;
+}
+.radio-bar {
+  padding-top: 20px;
 }
 .input-bar-box .input-bar {
   text-align: center;
@@ -141,15 +149,17 @@ input, textarea {
   line-height: 20px;
 }
 
-.input-bar-box .input-bar input[type=text], .input-bar-box .input-bar input[type=password] {
+.input-bar-box .input-bar input[type=text], .input-bar-box .input-bar input[type=password], .input-bar-box .input-bar select {
   border: 1px solid #6a1c1c;
   border-radius: 20px;
   outline: none;
   float: left;
-  width: 444px;
+  width: 424px;
+  padding: 0 10px;
   height: 40px;
   text-align: center;
   background-color: transparent;
+  box-sizing: content-box;
 }
 
 /* 选择框 */
@@ -184,6 +194,11 @@ input, textarea {
 .input-bar-box .check-bar {
   line-height: 40px;
   text-align: left;
+  font-weight: 100;
+}
+
+.mini .input-bar-box .check-bar {
+  font-weight: normal;
 }
 
 table {
@@ -204,6 +219,9 @@ th {
   padding-left: 5px;
   color: #6a1c1c;
 }
+option {
+  text-align: center;
+}
 
 /* 大量文本输入 */
 .input-bar-box .input-bar textarea {
@@ -211,8 +229,9 @@ th {
   border-radius: 20px;
   outline: none;
   float: left;
-  width: 440px;
-  height: 80px;
+  width: 420px;
+  padding: 10px;
+  height: 110px;
   resize: none;
   background-color: transparent;
 }
@@ -233,7 +252,7 @@ th {
 
 /* 短的输入框 */
 .content .input-bar-box .input-bar .short {
-  width: 145px;
+  width: 125px;
   float: left;
 }
 
@@ -242,7 +261,8 @@ th {
   border: none;
   border-bottom: 1px solid #f96569;
   width: 83%;
-  height: 60px;
+  height: 50px;
+  margin: 10px auto;
   outline: none;
   font-size: 26px;
   color: #52504f;
@@ -253,8 +273,9 @@ th {
 
 .line-input::-webkit-input-placeholder {
   color: #f86762;
-  font-size: 26px;
+  font-size: 20px;
   line-height: 30px;
+  font-family: 'Microsoft YaHei';
 }
 
 /* 输入条 */
@@ -262,6 +283,13 @@ input::-webkit-input-placeholder {
   color: #f86762;
   font-size: 20px;
   line-height: 30px;
+  font-family: 'Microsoft YaHei';
+}
+::-webkit-input-placeholder {
+  font-family: 'Microsoft YaHei';
+  /* text-align: justify; */
+  /* word-break: break-all; */
+  /* text-align: center; */
 }
 .info-box {
   color: #8e5356;
@@ -269,6 +297,11 @@ input::-webkit-input-placeholder {
   line-height: 40px;
   width: 86%;
   text-align: justify;
+  font-weight: 100;
+}
+
+.mini .info-box {
+  font-weight: normal;
 }
 
 .important {
@@ -276,6 +309,11 @@ input::-webkit-input-placeholder {
   margin: 20px auto;
   padding-left: 1px;
   color: #6a1d1c;
+  font-weight: 100;
+}
+
+.mini .important {
+  font-weight: normal;
 }
 
 .separate {
@@ -293,10 +331,17 @@ input::-webkit-input-placeholder {
   color: #6a1c1c;
   font-size: 20px;
   line-height: 50px;
+  font-weight: 100;
+}
+
+.mini .content-text {
+  font-weight: normal;
 }
 
 .content-text span {
   font-size: 24px;
+  font-weight: normal;
+  padding-right: 32px;
 }
 
 .table-box table {
@@ -332,7 +377,7 @@ input::-webkit-input-placeholder {
 /* 手机屏幕下 */
 .mini .login-box input {
   margin: 20px 10%;
-  width: 80%;
+  width: calc(80% - 20px);
   height: 33px;
   background-color: transparent;
 }
@@ -379,11 +424,11 @@ input::-webkit-input-placeholder {
   width: 100px;
 }
 
-.mini .input-bar-box .input-bar input, .mini .content .input-bar-box .input-bar .short {
-  width: calc(100% - 115px);
+.mini .input-bar-box .input-bar input, .mini .content .input-bar-box .input-bar .short, .mini .input-bar-box .input-bar select {
+  width: calc(100% - 119px);
   height: 22px;
-  padding: 0;
-  margin-left: -3px;
+  padding: 0 6px;
+  box-sizing: border-box;
 }
 
 .mini .info-box {
@@ -398,9 +443,9 @@ input::-webkit-input-placeholder {
 }
 
 .mini .line-input {
-  margin: 0 auto;
   display: block;
   width: 80%;
+  height: 40px;
 }
 
 .mini .important {
@@ -408,6 +453,7 @@ input::-webkit-input-placeholder {
   color: #45070e;
   /* 没对齐往右两个像素 */
   padding-left: 2px;
+  font-size: 16px;
 }
 
 .mini .tab-bar .item {
@@ -427,6 +473,9 @@ input::-webkit-input-placeholder {
   margin: 0 10%;
   font-size: 14px;
   line-height: 40px;
+}
+.mini .content-text span {
+  font-size: 18px;
 }
 
 .mini .input-bar-box .input-bar .text-explain {
@@ -466,7 +515,7 @@ input::-webkit-input-placeholder {
 
 
 .mini .input-bar-box .input-bar textarea {
-  width: calc(100% - 109px);
+  width: calc(100% - 140px);
   background-color: transparent;
   resize: none;
 }
@@ -488,4 +537,13 @@ input::-webkit-input-placeholder {
 
 .mini .input-bar-box .radio-bar {
   margin: 0 10%;
+}
+
+.mini .tip-bar {
+  padding: 0;
+}
+
+.mini .input-bar-box .input-bar .check-bar .line-input {
+  display: inline;
+  width: calc(100% - 187px);
 }

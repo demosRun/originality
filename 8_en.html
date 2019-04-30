@@ -67,7 +67,7 @@
         width: 260px;
       }
       .input-bar-box .input-bar textarea {
-        width: 310px;
+        width: 290px;
       }
       .mini .input-bar-box .input-bar .text {
         width: 300px;
@@ -84,7 +84,7 @@
       }
       .mini .input-bar-box .input-bar textarea {
         margin-top: 5px;
-        width: 100%;
+        width: calc(100% - 20px);
       }
       .mini .upload {
         width: 100%;
@@ -107,12 +107,18 @@
       .input-bar-box .input-bar .text-explain .explain {
         font-size: 16px;
       }
+      .input-bar-box .input-bar input[type=text], .input-bar-box .input-bar input[type=password] {
+        width: 290px;
+      }
+      .mini .input-bar-box .input-bar input[type=text], .mini .input-bar-box .input-bar input[type=password] {
+        width: 100%;
+      }
     </style>
   </head>
   <body>
     <div class="bg">
       <div class="content">
-        <div class="big-title">	&bull; 项目报名 	&bull;</div>
+        <div class="big-title">Registration Entry</div>
         <div class="tab-bar">
           <div class="item active">General Information</div>
           <div class="item">Project Information</div>
@@ -159,7 +165,7 @@
               <div class="top">Company Overview</div>
               <div class="explain">(up to 1000 words)</div>
             </div>
-            <textarea type="text"></textarea>
+            <textarea placeholder="Tips: Brief company introduction, Main Business and Products, etc.Focus: Core Competitiveness"></textarea>
             <div class="clear"></div>
           </div>
           <div class="input-bar">

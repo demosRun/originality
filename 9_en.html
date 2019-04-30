@@ -57,14 +57,15 @@
       .input-bar-box .input-bar .text {
         width: 260px;
       }
-      .input-bar-box .input-bar input[type=text], .input-bar-box .input-bar input[type=password] {
+      .input-bar-box .input-bar input[type=text], .input-bar-box .input-bar input[type=password], .input-bar-box .input-bar select {
         width: 314px;
       }
       .input-bar-box .input-bar .text-explain {
         width: 260px;
       }
       .input-bar-box .input-bar textarea {
-        width: 310px;
+        width: 290px;
+        padding: 10px;
       }
       .mini .input-bar-box .input-bar .text {
         width: 300px;
@@ -80,14 +81,15 @@
         line-height: 45px;
       }
       .mini .input-bar-box .input-bar textarea {
-        width: 100%;
+        width: 90%;
+        padding: 0 5%;
         margin: 8px 0px;
       }
       .mini .upload {
         width: 100%;
         margin: 10px 0;
       }
-      .mini .input-bar-box .input-bar input[type=text], .mini .input-bar-box .input-bar input[type=password] {
+      .mini .input-bar-box .input-bar input[type=text], .mini .input-bar-box .input-bar input[type=password], .mini .input-bar-box .input-bar select {
         width: 100%;
       }
       .tips {
@@ -112,6 +114,19 @@
       .input-bar-box .input-bar .text-explain .explain {
         font-size: 16px;
       }
+      .input-bar-box .input-bar input[type=text], .input-bar-box .input-bar input[type=password], .input-bar-box .input-bar select {
+        width: 290px;
+      }
+      .tip-bar {
+        font-size: 15px;
+        line-height: 60px;
+        color: #6a1c1c;
+      }
+      .mini .tip-bar {
+        width: 80%;
+        margin: 0 auto;
+        line-height: 25px;
+      }
     </style>
   </head>
   <body>
@@ -124,7 +139,9 @@
           <div class="item">Core Team Information</div>
           <div class="clear"></div>
         </div>
+        
         <div class="input-bar-box">
+          <div class="tip-bar">(For foreign enterprise projects, please choose one of the following divisions to participate in the competition.)</div>
           <div class="input-bar">
             <div class="text">Project Name </div>
             <input type="text"/>
@@ -132,7 +149,42 @@
           </div>
           <div class="input-bar">
             <div class="text">Division</div>
-            <input type="text"/>
+            <select>
+              <option>Not selected</option>
+              <option>Tianjin</option>
+              <option>Shanghai</option>
+              <option>Chongqing</option>
+              <option>Hebei</option>
+              <option>Shanxi</option>
+              <option>Liaoning</option>
+              <option>Jilin</option>
+              <option>Heilongjiang</option>
+              <option>Jiangsu</option>
+              <option>Zhejiang</option>
+              <option>Anhui</option>
+              <option>Fujian</option>
+              <option>Jiangxi</option>
+              <option>Shandong</option>
+              <option>Henan</option>
+              <option>Hubei</option>
+              <option>Hunan</option>
+              <option>Guangdong</option>
+              <option>Hainan</option>
+              <option>Sichuan</option>
+              <option>Guizhou</option>
+              <option>Yunnan</option>
+              <option>Shaanxi</option>
+              <option>Gansu</option>
+              <option>Qinghai</option>
+              <option>Inner Mongolia</option>
+              <option>Guangxi</option>
+              <option>Tibet</option>
+              <option>Ningxia</option>
+              <option>Xinjiang</option>
+              <option>Taiwan</option>
+              <option>Macao</option>
+              <option>Hong Kong</option>
+            </select>
             <div class="clear"></div>
           </div>
           <div class="input-bar explain">
@@ -140,7 +192,7 @@
               <div class="top">Project Overview</div>
               <div class="explain">(up to 1000 words)</div>
             </div>
-            <textarea></textarea>
+            <textarea placeholder="Product development, production strategy, industry characteristics, competition focus, product and service background, market analysis,current development stage, innovation of this project, etc."></textarea>
             <div class="clear"></div>
           </div>
 

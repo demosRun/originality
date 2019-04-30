@@ -38,7 +38,7 @@
         line-height: 45px;
       }
       .mini .input-bar-box .input-bar textarea {
-        width: 100%;
+        width: calc(100% - 20px);
       }
       .mini .input-bar-box .input-bar .explain {
         margin-top: 5px;
@@ -57,14 +57,17 @@
         font-size: 22px;
       }
       .input-bar-box .input-bar .text-explain .explain {
-        font-size: 16px;
+        font-size: 12px;
+      }
+      .mini .input-bar-box .input-bar .text-explain {
+        font-size: 14px;
       }
     </style>
   </head>
   <body>
     <div class="bg">
       <div class="content">
-        <div class="big-title">	&bull; 项目报名 	&bull;</div>
+        <div class="big-title">Registration Entry</div>
         <div class="tab-bar">
           <div class="item">General Information</div>
           <div class="item">Project Information</div>
@@ -77,7 +80,7 @@
               <div class="top">Team Overview</div>
               <div class="explain">(up to 1000 words)</div>
             </div>
-            <textarea></textarea>
+            <textarea placeholder="Tips: Brief core team introduction, Main Business and Products, etc.Focus: Core Competitiveness"></textarea>
             <div class="clear"></div>
           </div>
         </div>
