@@ -202,10 +202,17 @@ input, textarea {
 }
 
 table {
-  border-top: 1px solid #6a1c1c;
-  border-left: 1px solid #6a1c1c;
+  border: 1px solid #6a1c1c;
+  border-radius: 10px;
 }
 
+/* 增加的内容 */
+tr th:nth-last-child(1) {
+  border-right: none;
+}
+tr:nth-last-child(1) th {
+  border-bottom: none;
+}
 td {
   text-align: center;
 }
@@ -218,6 +225,7 @@ th {
   text-align: left;
   padding-left: 5px;
   color: #6a1c1c;
+  height: 40px;
 }
 option {
   text-align: center;
@@ -285,6 +293,19 @@ input::-webkit-input-placeholder {
   line-height: 30px;
   font-family: 'Microsoft YaHei';
 }
+.mini textarea::-webkit-input-placeholder { /* WebKit browsers */
+  font-size: 14px;
+}
+
+.mini textarea::-moz-placeholder { /* Mozilla Firefox 19+ */
+  font-size: 14px;
+}
+
+.mini textarea:-ms-input-placeholder { /* Internet Explorer 10+ */
+  font-size: 14px;
+}   
+
+
 ::-webkit-input-placeholder {
   font-family: 'Microsoft YaHei';
   /* text-align: justify; */
@@ -546,4 +567,9 @@ input::-webkit-input-placeholder {
 .mini .input-bar-box .input-bar .check-bar .line-input {
   display: inline;
   width: calc(100% - 187px);
+}
+
+/* 增加的内容 */
+.mini th {
+  height: 20px;
 }
