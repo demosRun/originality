@@ -37,7 +37,7 @@ input, textarea {
   background-repeat: no-repeat;
   background-position: 100% 100%;
   background-size: 100%;
-  background-image: url('../static/images/2-bg.png');
+  background-image: url('../images/2-bg.png');
 }
 .content {
   padding-top: 4%;
@@ -84,6 +84,22 @@ input, textarea {
   box-sizing: content-box;
   font-family:'Microsoft YaHei';
 }
+
+.button-box .button, .button-box input {
+  height: 40px;
+  width: 120px;
+  background: none;
+  border: 1px solid #6a1d1c;
+  border-radius: 20px;
+  font-size: 22px;
+  cursor: pointer;
+  text-align: center;
+  line-height: 40px;
+  color: #6a1d1c;
+  box-sizing: content-box;
+  font-family:'Microsoft YaHei';
+}
+
 .button-box .login, .button-box .last {
   margin-left: 1px;
   float: left;
@@ -201,9 +217,10 @@ input, textarea {
   font-weight: normal;
 }
 
-table {
-  border: 1px solid #6a1c1c;
+.content table {
+ border: 1px solid #6a1c1c;
   border-radius: 10px;
+  border-collapse: unset ;
 }
 
 /* 增加的内容 */
@@ -213,6 +230,7 @@ tr th:nth-last-child(1) {
 tr:nth-last-child(1) th {
   border-bottom: none;
 }
+
 td {
   text-align: center;
 }
@@ -238,8 +256,8 @@ option {
   outline: none;
   float: left;
   width: 420px;
-  padding: 10px;
-  height: 110px;
+  padding: 6px 10px;
+  height: 115px;
   resize: none;
   background-color: transparent;
 }
@@ -289,28 +307,19 @@ option {
 /* 输入条 */
 input::-webkit-input-placeholder {
   color: #f86762;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 30px;
   font-family: 'Microsoft YaHei';
 }
-.mini textarea::-webkit-input-placeholder { /* WebKit browsers */
-  font-size: 14px;
-}
-
-.mini textarea::-moz-placeholder { /* Mozilla Firefox 19+ */
-  font-size: 14px;
-}
-
-.mini textarea:-ms-input-placeholder { /* Internet Explorer 10+ */
-  font-size: 14px;
-}   
-
-
 ::-webkit-input-placeholder {
   font-family: 'Microsoft YaHei';
+  font-size: 18px;
   /* text-align: justify; */
   /* word-break: break-all; */
   /* text-align: center; */
+}
+textarea::-webkit-input-placeholder {
+  font-size: 16px !important;
 }
 .info-box {
   color: #8e5356;
@@ -552,7 +561,7 @@ input::-webkit-input-placeholder {
 
 .mini .input-bar-box .input-bar .check-box {
   width: 100%;
-  font-size: 16px;
+  font-size: 16px !important;
   padding-top: 10px;
 }
 
@@ -572,4 +581,39 @@ input::-webkit-input-placeholder {
 /* 增加的内容 */
 .mini th {
   height: 20px;
+}
+
+.mini ::-webkit-input-placeholder { /* WebKit browsers */
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.mini ::-moz-placeholder { /* Mozilla Firefox 19+ */
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.mini :-ms-input-placeholder { /* Internet Explorer 10+ */
+  font-size: 14px;
+  line-height: 20px;
+}  
+
+.mini .input-bar input {
+  line-height: 20px !important;
+  font-size: 14px !important;
+}
+.mini textarea::-webkit-input-placeholder { /* WebKit browsers */
+  font-size: 14px;
+}
+
+.mini textarea::-moz-placeholder { /* Mozilla Firefox 19+ */
+  font-size: 14px;
+}
+
+.mini textarea:-ms-input-placeholder { /* Internet Explorer 10+ */
+  font-size: 14px;
+}   
+
+.mini input, .mini textarea {
+	font-size: 14px;
 }

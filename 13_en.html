@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <title>13</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="height=device-height,initial-scale=1,user-scalable=no,maximum-scale=1,,user-scalable=no"/>
+    <meta name="renderer" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <link rel="stylesheet" href="./static/main.css">
+    <!-- *head* -->
+    <style type="text/css">
+      body, html, .bg {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        overflow: auto;
+      }
+      /* 去掉ios输入框内阴影 */
+      input, textarea {
+        -webkit-appearance: none;
+        appearance: none;
+      }
+      .clear {
+        clear: both;
+      }
+      .bg {
+        overflow: auto;
+        background-repeat: no-repeat;
+        background-position: 100% 100%;
+        background-size: 100%;
+        background-image: url('./static/images/2-bg.png');
+      }
+      .content {
+        max-width: 960px;
+        margin: auto;
+        padding-top: 0;
+        padding-bottom: 80px;
+        background-color: transparent;
+      }
+      .content img {
+        display: block;
+      }
+      .title {
+        margin-bottom: 45px;
+        margin: 8% auto;
+      }
+      .text-box {
+        color: #6a1c1c;
+        font-size: 22px;
+        line-height: 33px;
+        margin: 0 auto;
+        width: 85%;
+      }
+      .button-box {
+        width: 85%;
+        margin: 0 auto;
+        margin-top: 40px;
+      }
+      p {
+        text-indent: 2rem;
+        text-align: justify;
+        font-weight: lighter;
+      }
+      .mini p {
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bg">
+      <div class="content">
+        <img class="title" src="./static/images/13-en-text.png"/>
+        <div class="text-box">
+          <p>The 2019 Beijing Cultural and Creative Competition was hosted by the Beijing Cultural and Creative Industry Promotion Center.The People's Daily Online undertakes national competition service.The competition will focus on the theme of “Strive for a new era, creativity and win the future”, inherit the excellent traditional culture and promote the development of the cultural and creative industry.</p>
+          <p>In this competition, the Beijing Division and the National Region will be set up according to the participating regions.We recruit digital creative, creative design, non-legacy and IP development, cultural education, cultural tourism, cultural sports, advertising media and other projects and cultural and creative start-up projects.</p>
+          <p>From April to July of 2019, the competitions will be held in the preliminary, semi-final and final competitions. The first, second and third prizes and individual awards will be established, and corresponding trophies and certificates will be awarded.In the end of August, the final will be held in Beijing. The competition will be held in three categories: creativity, innovation and entrepreneurship. First, second and third prizes and individual awards will be established, and prizes, trophies and certificates will be awarded.</p>
+          <p>The top 100 companies in Beijing and the top 100 companies in the country will receive entrepreneurial service spree:site use rights of the contest industrial park,product display of related activities of 2019 Beijing Cultural Expo,interfacing with more investment institutions and project roadshow opportunities,services provided by quality and exclusive consultants,participating companies from national and overseas competitions can receive the "Beijing Express Train" service provided by the competition.</p>
+          <p>From April 18, 2019, you can register online through this platform.For the approved projects, we will send the results to your registered email address.You can also check the progress of your project by clicking on the "Query progress" button.</p>
+        </div>
+        <div class="button-box">
+          <a class="last">next</a>
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+    <script charset="utf-8" src="http://tools.people.com.cn/libs/jquery/3.0.0/jquery-3.0.0.min.js"></script>
+    <script>
+      $(function () {
+        // 根据屏幕比例判断横屏还算是竖屏
+        var scale = document.body.clientWidth / document.body.clientHeight
+        if (scale < 1) {
+          document.getElementsByTagName('body')[0].classList.add('mini')
+        }
+      })
+    </script>
+  </body>
+</html>
